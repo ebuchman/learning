@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to the Pythereum-Cruiser!
+
+  p #{api_results}
+
+  form(action='./', method='GET', id='block_button_form')
+  button(type="submit" value="blocks" form="block_button_form" name="blocks") #{'get blocks'}
+
+  form(action='./', method='GET', id='block_selector_form')
+    p Enter a block hash
+    input(type="text", name="block_hash")
+  button(type="submit" form="block_selector_form") #{'get block'}
+
+  form(action='./', method='GET', id='connected_peers_button_form')
+  button(type="submit" value="connected_peers" form="connected_peers_button_form" name="connected_peers") #{'get connected peers'}
+
+  form(action='./', method='GET', id='known_peers_button_form')
+  button(type="submit" value="known_peers" form="known_peers_button_form" name="known_peers") #{'get known peers'}
+

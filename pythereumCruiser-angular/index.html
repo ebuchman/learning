@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.7/angular.min.js"></script>
+<script src="eth.js"></script>
+</head>
+<body>
+<h2>Eth</h2>
+<div ng-controller="EthCtrl">
+    <p> {{ret}} </p>
+    <p> {{apicall}} </p>
+    <p> {{path}} </p>
+    <p> {{error}} </p>
+    <form ng-submit="getBlocks()">
+        <input class="btn-primary" type="submit" value="blocks">
+    </form>
+    <form ng-submit="getBlock()">
+        <input type="text" size="30" placeholder="enter block hash" name="block_hash_text" ng-model="block_hash_text">
+        <input class="btn-primary" type="submit" value="block_hash">
+    </form>
+
+    <form ng-submit="getConnectedPeers()">
+        <input class="btn-primary" type="submit" value="connected_peers">
+    </form>
+    <form ng-submit="getKnownPeers()">
+        <input class="btn-primary" type="submit" value="known_peers">
+    </form>
+
+</div>
+</body>
+</html>
+
